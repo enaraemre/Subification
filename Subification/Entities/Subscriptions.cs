@@ -1,5 +1,5 @@
 ﻿using SQLite;
-
+using Microsoft.Datasync.Client;
 
 namespace SUBIFICATION.Entities;
 

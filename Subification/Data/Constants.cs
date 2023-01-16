@@ -14,4 +14,19 @@ public static class Constants
 
     public static string DatabasePath => 
         Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
+
+    public static string ServiceUri = "https://demo-datasync-quickstart.azurewebsites.net";
+
+    /// <summary>
+    /// The application (client) ID for the native app within Azure Active Directory
+    /// </summary>
+    public static string ApplicationId = "<ea8eb6fe-dbf7-4641-bfe5-3ed957193f1a>";
+
+    /// <summary>
+    /// The list of scopes to request
+    /// </summary>
+    public static string[] Scopes = new[]
+    {
+          "<access_as_user>"
+      };
 }

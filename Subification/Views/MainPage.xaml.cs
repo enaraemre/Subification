@@ -2,16 +2,23 @@
 using SUBIFICATION.Data;
 using SUBIFICATION.Entities;
 using Plugin.LocalNotification;
+using Microsoft.Identity.Client;
+using System.Diagnostics;
+
 
 namespace SUBIFICATION.Views;
 
 public partial class MainPage : ContentPage
 {
+    public IPublicClientApplication IdentityClient { get; set; }
+
     SubificationDatabase database;
     public ObservableCollection<Subscriptions> Items { get; set; } = new();
     public MainPage(SubificationDatabase subificationDatabase)
     {
         InitializeComponent();
+        SubificationService = new RemoteSubificationService(GetAuthenticationToken);
+       
         database = subificationDatabase;
         BindingContext = this;
     }

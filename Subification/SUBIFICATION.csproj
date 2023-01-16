@@ -53,7 +53,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.Datasync.Client" Version="5.0.20" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Graph" Version="4.50.0" />
+		<PackageReference Include="Microsoft.Identity.Client" Version="4.49.1" />
 		<PackageReference Include="Plugin.LocalNotification" Version="10.0.3" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 		<PackageReference Include="SQLitePCLRaw.core" Version="2.1.3" />
